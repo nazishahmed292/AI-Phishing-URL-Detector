@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AI Phishing Guard</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: -apple-system, Arial, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background: #f7f8fa;
+      color: #222;
+    }
+    h1 {
+      font-size: 15px;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    #status-card {
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    #status-card.safe { background: #2ecc71; }
+    #status-card.danger { background: #e74c3c; }
+    #status-card.unknown { background: #95a5a6; }
+    #status-card .verdict { font-size: 16px; font-weight: bold; }
+    #status-card .confidence { font-size: 12px; opacity: 0.9; margin-top: 4px; }
+    #signals { font-size: 12px; margin: 8px 0; padding-left: 18px; }
+    #signals li { margin-bottom: 4px; }
+    #url-display {
+      font-size: 11px;
+      word-break: break-all;
+      color: #555;
+      margin-bottom: 10px;
+      background: #eee;
+      padding: 6px 8px;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      background: #3498db;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    button:hover { background: #2f89c4; }
+    a { color: #3498db; font-size: 11px; }
+    footer { margin-top: 10px; font-size: 10px; color: #888; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>🛡️ AI Phishing Guard</h1>
+  <div id="url-display">Loading current tab...</div>
+  <div id="status-card" class="unknown">
+    <div class="verdict" id="verdict-text">Checking...</div>
+    <div class="confidence" id="confidence-text"></div>
+  </div>
+  <ul id="signals"></ul>
+  <button id="recheck-btn">Re-check this page</button>
+  <footer>
+    Backend: <a id="api-link" href="#" target="_blank">dashboard</a>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>

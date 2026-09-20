@@ -1,0 +1,42 @@
+{
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1_score": 1.0,
+  "confusion_matrix": [
+    [
+      300,
+      0
+    ],
+    [
+      0,
+      300
+    ]
+  ],
+  "feature_importances": {
+    "suspicious_word_count": 0.2813,
+    "is_https": 0.2248,
+    "has_hyphen_in_domain": 0.0783,
+    "hostname_entropy": 0.0696,
+    "num_hyphens": 0.0686,
+    "hostname_length": 0.0552,
+    "path_length": 0.0463,
+    "url_length": 0.0448,
+    "digit_letter_ratio": 0.0405,
+    "num_digits": 0.0378,
+    "num_slashes": 0.0175,
+    "num_dots": 0.0156,
+    "count_www": 0.0085,
+    "num_subdomains": 0.0051,
+    "has_ip_host": 0.0046,
+    "num_equal_signs": 0.0007,
+    "num_question_marks": 0.0005,
+    "has_shortener": 0.0002,
+    "num_underscores": 0.0,
+    "num_at_signs": 0.0,
+    "num_percent": 0.0,
+    "num_ampersands": 0.0,
+    "has_port": 0.0,
+    "has_https_in_path_not_host": 0.0
+  }
+}
